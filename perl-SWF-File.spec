@@ -13,7 +13,7 @@ Release:	0.2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/authors/id/Y/YS/YSAS/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-authors/id/Y/YS/YSAS/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	69071674371e0137c0ae5698f621d6a1
 URL:		http://search.cpan.org/dist/SWF-File/
 %{?with_tests:BuildRequires:	perl-Data-TemporaryBag >= 0.08}
