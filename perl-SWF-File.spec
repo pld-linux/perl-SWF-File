@@ -10,12 +10,16 @@ Summary(pl):	SWF::File - tworzenie plików SWF
 Name:		perl-SWF-File
 Version:	0.36
 Release:	0.2
+# same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-BuildRequires:	perl-Data-TemporaryBag
+Source0:	http://www.cpan.org/authors/id/Y/YS/YSAS/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	69071674371e0137c0ae5698f621d6a1
+URL:		http://search.cpan.org/dist/SWF-File/
+%{?with_tests:BuildRequires:	perl-Data-TemporaryBag >= 0.08}
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+Requires:	perl-Data-TemporaryBag >= 0.08
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -37,9 +41,6 @@ niej umieszczaæ SWF::Element::Tags.
 	INSTALLDIRS=vendor
 
 %{__make}
-# if module isn't noarch, use:
-# %{__make} \
-#	OPTIMIZE="%{rpmcflags}"
 
 %{?with_tests:%{__make} test}
 
@@ -55,6 +56,11 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_vendorlib}/FIXME*
-%{perl_vendorarch}/FIXME*
+%attr(755,root,root) %{_bindir}/dumpswf.plx
+%dir %{perl_vendorlib}/SWF
+%{perl_vendorlib}/SWF/*.pm
+%dir %{perl_vendorlib}/SWF/BinStream
+%{perl_vendorlib}/SWF/BinStream/*.pm
+%dir %{perl_vendorlib}/SWF/BinStream/Codec
+%{perl_vendorlib}/SWF/BinStream/Codec/*.pm
 %{_mandir}/man3/*
