@@ -5,31 +5,34 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	SWF
 %define	pnam	File
-Summary:	SWF::File - Create SWF file.
+Summary:	SWF::File - create SWF file
+Summary(pl):	SWF::File - tworzenie plików SWF
 Name:		perl-SWF-File
 Version:	0.36
 Release:	0.2
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+BuildRequires:	perl-Data-TemporaryBag
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-BuildRequires:	perl-Data-TemporaryBag
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_noautoreq	'perl(anything_fake_or_conditional)'
 
 %description
 SWF::File module can be used to make SWF (Macromedia Flash(R)) movie.
 SWF::File is a subclass of SWF::BinStream::Write, so you can pack
 SWF::Element::Tags in it.
 
+%description -l pl
+Modu³ SWF::File mo¿e byæ u¿ywany do tworzenia filmów SWF (Macromedia
+Flash(R)). SWF::File to podklasa SWF::BinStream::Write, wiêc mo¿na w
+niej umieszczaæ SWF::Element::Tags.
+
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-# Don't use pipes here: they generally don't work. Apply a patch.
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 
@@ -52,7 +55,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-# use macros:
-%{perl_vendorlib}/*
-%{perl_vendorarch}/*
+%{perl_vendorlib}/FIXME*
+%{perl_vendorarch}/FIXME*
 %{_mandir}/man3/*
