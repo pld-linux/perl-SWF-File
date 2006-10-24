@@ -9,7 +9,7 @@ Summary:	SWF::File - create SWF file
 Summary(pl):	SWF::File - tworzenie plików SWF
 Name:		perl-SWF-File
 Version:	0.42
-Release:	0.1
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
