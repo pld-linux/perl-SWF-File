@@ -6,7 +6,7 @@
 %define	pdir	SWF
 %define	pnam	File
 Summary:	SWF::File - create SWF file
-Summary(pl):	SWF::File - tworzenie plików SWF
+Summary(pl.UTF-8):   SWF::File - tworzenie plikÃ³w SWF
 Name:		perl-SWF-File
 Version:	0.42
 Release:	1
@@ -28,10 +28,10 @@ SWF::File module can be used to make SWF (Macromedia Flash(R)) movie.
 SWF::File is a subclass of SWF::BinStream::Write, so you can pack
 SWF::Element::Tags in it.
 
-%description -l pl
-Modu³ SWF::File mo¿e byæ u¿ywany do tworzenia filmów SWF (Macromedia
-Flash(R)). SWF::File to podklasa SWF::BinStream::Write, wiêc mo¿na w
-niej umieszczaæ SWF::Element::Tags.
+%description -l pl.UTF-8
+ModuÅ‚ SWF::File moÅ¼e byÄ‡ uÅ¼ywany do tworzenia filmÃ³w SWF (Macromedia
+Flash(R)). SWF::File to podklasa SWF::BinStream::Write, wiÄ™c moÅ¼na w
+niej umieszczaÄ‡ SWF::Element::Tags.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
