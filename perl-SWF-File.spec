@@ -6,7 +6,7 @@
 %define	pdir	SWF
 %define	pnam	File
 Summary:	SWF::File - create SWF file
-Summary(pl.UTF-8):   SWF::File - tworzenie plików SWF
+Summary(pl.UTF-8):	SWF::File - tworzenie plików SWF
 Name:		perl-SWF-File
 Version:	0.42
 Release:	1
